@@ -1,0 +1,81 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTDXHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <style>
+    fieldset#login>legend {
+      font-weight: bold;
+    }
+
+    fieldset form {
+      display: grid;
+      gap: 0.5rem;
+      text-align: end;
+    }
+
+    fieldset#login form>div {
+      display: flex;
+      justify-content: space-between;
+      gap: 1ch;
+    }
+
+    .logo {
+      height: auto;
+      width: 200px;
+      padding: 1rem;
+    }
+
+    main {
+      display: grid;
+      flex-wrap: wrap;
+      font-family: 'Raleway';
+      padding-bottom: 4rem;
+      text-align: center;
+      justify-items: center;
+    }
+
+    .title {
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    button#proceed {
+      --hue: 240;
+      --saturation: 0%;
+      height: auto;
+      background: linear-gradient(90deg, hsl(var(--hue), var(--saturation), 90%), hsl(var(--hue), var(--saturation), 30%), hsl(var(--hue), var(--saturation), 90%));
+      color: white;
+      border-radius: 7px;
+      padding: 3px 1.5rem;
+      margin-top: 20px;
+      border: solid 1px grey;
+    }
+  </style>
+  <title>Gotcha Admin Page</title>
+</head>
+
+<body>
+  <main>
+    <img class='logo' src="logo.png" alt="Gotcha Logo">
+    <h2 class=title>Gotcha Admin Page </h2>
+    <fieldset id="adduser">
+      <form method="POST" ,="" action="/admin/user" autocomplete="off">
+        <div>Username: <input name="username" id="username" type="text"></div>
+        <div>Email: <input name="email" id="email" type="text"></div>
+        <div>Password: <input name="password" id="password" type="password"></div>
+        <div>License Start: <input name="licenseStart" id="licenseStart" type="date"></div>
+        <div>License End: <input name="licenseEnd" id="licenseEnd" type="date"></div>
+
+        <div style="display: flex;justify-content: space-around;">Privilege:
+          <div>user <input type="radio" id="user" name="privilege" value="user" checked>
+            admin <input type="radio" id="admin" name="privilege" value="admin"></div>
+        </div>
+
+        <button id="proceed">Add User</button>
+      </form>
+    </fieldset>
+    You can check all available users <a href='/admin/user'>here</a>
+  </main>
+</body>
+
+</html>
