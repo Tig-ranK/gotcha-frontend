@@ -5,44 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOTCHA</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <title>Gotcha Upload</title>
+
 </head>
 
 <body>
-    <h1 style="text-align: center;"><a href="/">GOTCHA </a></h1>
-    <form action="{{upload_url}}" method="post" enctype="multipart/form-data"
-        style="width: 80%; margin-left: 10%; margin-top: 200px; text-align: center;">
-        <div style="padding: 10px;">
-            <input type="file" accept=".mp4,.mov,.avi,.mkv,.wmv" required name="input_file" multiple="true" />
-        </div>
-        <div style="padding: 10px;">
-            <input type="submit" value="Upload & Process">
-        </div>
-    </form>
-
-
-    <form action="{{upload_url}}" method="post" enctype="multipart/form-data"
-        style="width: 80%; margin-left: 10%; margin-top: 100px; text-align: center;">
-
-        <label for="start">Start date:</label>
-        <input type="date" id="start" name="start_date" required>
-
-        <label for="end">End date:</label>
-        <input type="date" id="end" name="end_date" required>
-
-        <div style="padding: 10px;">
-            <input type="file" accept=".mp4,.mov,.avi,.mkv,.wmv" required name="input_file" multiple="true" />
-        </div>
-        <div style="padding: 10px;">
-            <input type="submit" value="Upload & Process">
-        </div>
-    </form>
+    <main class="upload--container">
+        <!-- TODO maybe add a Gotcha logo -->
+        <form class="upload--form" action="{{upload_url}}" method="post" enctype="multipart/form-data">
+            <div>
+                <input type="file" accept=".mp4,.mov,.avi,.mkv,.wmv" required name="input_file" multiple="true" />
+            </div>
+            <button class="upload--btn">Upload & Process</button>
+        </form>
+        <form class="upload--form" action="{{upload_url}}" method="post" enctype="multipart/form-data">
+            <label for="start">Start date:</label>
+            <input class="upload--input" type="date" id="start" name="start_date" required>
+            <label for="end">End date:</label>
+            <input class="upload--input" type="date" id="end" name="end_date" required>
+            <input type="file" accept=".mp4,.mov,.avi,.mkv,.wmv" name="input_file" multiple="true" required />
+            <button class="upload--btn">Upload & Process</button>
+        </form>
+    </main>
 
 </body>
 

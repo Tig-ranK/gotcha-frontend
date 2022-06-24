@@ -5,22 +5,28 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="login.css">
+   <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
    <title>Gotcha Login</title>
 </head>
 
 <body>
    <main class="login--container">
+      <div class="login--img-container">
+         <img class="login--img" src="./media/gotcha_logo.png" alt="gotcha logo with text">
+      </div>
       <form class="login--form" method="POST" , action="/login" autocomplete="off">
          <label for="username">Username</label>
-         <input class="login--input" name="username" id="username" type="text" placeholder="Enter your username..." />
+         <input class="login--input" name="username" id="username" type="text" required
+            placeholder="Enter your username..." />
          <label for="password">Password</label>
-         <input class="login--input" name="password" id="password" type="password"
+         <input class="login--input" name="password" id="password" type="password" required
             placeholder="Enter your password..." />
          <button class="login--btn" type="submit">Login</button>
          <div class="login--bottom">
             <label for="remember-me">
-               <input type="checkbox" style="margin-right: 5px" name="remember-me" id="remember-me">Remember Me</label>
+               <input type="checkbox" style="margin-right: 5px" name="remember-me" id="remember-me">Remember Me
+            </label>
             <a href="#">Forgot Password?</a>
          </div>
       </form>
