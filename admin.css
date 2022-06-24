@@ -41,15 +41,21 @@ body {
    width: calc(150px * 1.17);
    height: calc(150px);
    margin-bottom: 0.75em;
+
+   pointer-events: none;
+   user-select: none;
 }
 
 .admin--img-container {
    position: absolute;
    opacity: 0.2;
-   z-index: 1;
+
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+
+   pointer-events: none;
+   user-select: none;
 }
 
 .admin--form {

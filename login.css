@@ -41,6 +41,9 @@ body {
    width: 117px;
    height: 100px;
    margin-bottom: 0.75em;
+
+   pointer-events: none;
+   user-select: none;
 }
 
 .login--form {
@@ -85,7 +88,6 @@ body {
 
 @media screen and (max-width: 768px) {
    .login--container {
-      /* flex-direction: column; */
       width: 85%;
       text-align: center;
       padding-inline: 1.5rem;
